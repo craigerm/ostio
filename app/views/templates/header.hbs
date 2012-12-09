@@ -9,8 +9,9 @@
 <div class="header-auth">
   {{#if_logged_in}}
     {{#with_user}}
-      <a href="/{{login}}"><img class="avatar header-avatar" src="{{#gravatar}}{{gravatar_id}}{{/gravatar}}"></a>
-      <a href="/{{login}}">{{login}}</a>
+      <a href="/{{username}}"><img class="avatar header-avatar"
+      src="{{#gravatar}}{{gravatarId}}{{/gravatar}}"></a>
+      <a href="/{{username}}">{{username}}</a>
       <a class="icon-cog" href="/settings"></a>
       <a class="icon-logout" href="/logout/"></a>
     {{/with_user}}

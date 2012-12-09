@@ -9,9 +9,9 @@ module.exports = class TopicPageView extends PageView
   template: template
 
   getNavigationData: ->
-    gravatar_id: @model.get('repo').get('user').get('gravatar_id'),
-    user_login: @model.get('repo').get('user').get('login'),
-    repo_name: @model.get('repo').get('name'),
+    gravatar_id: @model.get('repo').get('user').get('gravatarId'),
+    user_login: @model.get('repo').get('user').get('username'),
+    repo_name: @model.get('repo').get('title'),
     topic_number: @model.get('number')
 
   renderSubviews: ->

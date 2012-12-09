@@ -6,8 +6,8 @@ module.exports = class Topic extends Model
   urlKey: 'number'
 
   urlPath: ->
-    "/users/#{@get('repo').get('user').get('login')}
-/repos/#{@get('repo').get('name')}
+    "/users/#{@get('repo').get('user').get('username')}
+/repos/#{@get('repo').get('title')}
 /topics/"
 
   parse: (response) ->

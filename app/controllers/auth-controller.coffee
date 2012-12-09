@@ -4,7 +4,6 @@ module.exports = class AuthController extends Controller
   historyURL: 'auth'
 
   callback: (params) ->
-    console.log 'AuthController'
     localStorage.setItem 'accessToken', params.accessToken
     @redirectTo "/#{params.login}"
     window.location.reload()

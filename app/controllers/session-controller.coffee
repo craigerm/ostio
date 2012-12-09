@@ -86,7 +86,7 @@ module.exports = class SessionController extends Controller
 
     # Hide the login view
     @disposeLoginView()
-
+    
     # Transform session into user attributes and create a user
     session.id = session.userId
     delete session.userId

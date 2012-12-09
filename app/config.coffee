@@ -3,7 +3,7 @@ config = {api: {}}
 production = yes
 
 config.api.root = if production
-  'http://api.ost.io'
+  'http://quiet-brook-7460.herokuapp.com'
 else
   'http://dev.ost.io:3000'
 

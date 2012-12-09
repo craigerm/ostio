@@ -5,8 +5,8 @@ Topic = require 'models/topic'
 
 module.exports = class Post extends Model
   urlPath: ->
-    "/users/#{@get('topic').get('repo').get('user').get('login')}
-/repos/#{@get('topic').get('repo').get('name')}
+    "/users/#{@get('topic').get('repo').get('user').get('username')}
+/repos/#{@get('topic').get('repo').get('title')}
 /topics/#{@get('topic').get('number')}
 /posts/"
 
@@ -19,7 +19,7 @@ module.exports = class Post extends Model
       _.extend response, {topic}
 
   setUrl: ->
-    url = "/#{@get('topic').get('repo').get('user').get('login')}
-/#{@get('topic').get('repo').get('name')}
+    url = "/#{@get('topic').get('repo').get('user').get('username')}
+/#{@get('topic').get('repo').get('title')}
 /topics/#{@get('topic').get('number')}"
     @set({url})

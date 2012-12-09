@@ -13,8 +13,9 @@ module.exports = class UserPageView extends PageView
   template: template
 
   getNavigationData: ->
-    gravatar_id: @model.get('gravatar_id'),
-    user_login: @model.get('login')
+
+    gravatar_id: @model.get('gravatarId'),
+    user_login: @model.get('username')
 
   renderSubviews: ->
     # Main repositories collection.
@@ -30,11 +31,11 @@ module.exports = class UserPageView extends PageView
 
     # If current page is user’s page, create organizations subview.
     # Otherwise, create organization managers subview.
-    if @model.get('type') is 'User' and @organizations.length > 0
+    if @model.get('type') is 'User' and @organizations and @organizations.length > 0
       @subview 'organizations', new UserOrganizationsView
         collection: @organizations,
         container: @$('.user-organization-list-container')
-    else if @owners.length > 0
+    else if @owners and  @owners.length > 0
       @subview 'owners', new OrganizationOwnersView
         collection: @owners,
         container: @$('.user-owner-list-container')

@@ -9,9 +9,9 @@ module.exports = class RepoPageView extends PageView
   template: template
 
   getNavigationData: ->
-    gravatar_id: @model.get('user').get('gravatar_id')
-    user_login: @model.get('user').get('login')
-    repo_name: @model.get('name')
+    gravatar_id: @model.get('user').get('gravatarId')
+    user_login: @model.get('user').get('username')
+    repo_name: @model.get('title')
 
   renderSubviews: ->
     @topics = new Collection null, model: Topic

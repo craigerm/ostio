@@ -1,11 +1,11 @@
 {{#if_logged_in}}
   {{#with_user}}
   <div class="post-avatar-container">
-    <img class="post-avatar avatar" src="{{#gravatar}}{{gravatar_id}}{{/gravatar}}" alt="" />
+    <img class="post-avatar avatar" src="{{#gravatar}}{{gravatarId}}{{/gravatar}}" alt="" />
   </div>
   <div class="post-content">
     <div class="post-header">
-      <a class="post-author" href="/{{login}}">{{login}}</a>      
+      <a class="post-author" href="/{{username}}">{{username}}</a>      
       <em class="post-metadata">Posts are parsed with <a href="http://github.github.com/github-flavored-markdown/" class="gfm-help">Markdown</a></em>
     </div>
     <div class="post-text">

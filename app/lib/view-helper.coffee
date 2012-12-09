@@ -22,7 +22,7 @@ Handlebars.registerHelper 'if_is_repo_admin', (options) ->
   return options.inverse(this) unless user
   orgs = user.get('organizations')?.pluck('login') ? []
   repoOwner = @login
-  if user.isAdmin() or user.get('login') is repoOwner or repoOwner in orgs
+  if user.isAdmin() or user.get('username') is repoOwner or repoOwner in orgs
     options.fn(this)
   else
     options.inverse(this)

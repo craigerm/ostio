@@ -1,11 +1,11 @@
-<a class="post-avatar-container" href="/{{user.login}}">
-  <img class="post-avatar avatar" src="{{#gravatar}}{{user.gravatar_id}}{{/gravatar}}" alt="" />
+<a class="post-avatar-container" href="/{{user.username}}">
+  <img class="post-avatar avatar" src="{{#gravatar}}{{user.gravatarId}}{{/gravatar}}" alt="" />
 </a>
 <div class="post-content">
   <div class="post-header">
-    <a class="post-author" href="/{{user.login}}">{{user.login}}</a>
+    <a class="post-author" href="/{{user.username}}">{{user.username}}</a>
     {{#if url}}in <a class="post-url" href="{{url}}">{{url}}</a>{{/if}}
-    <time class="post-metadata post-date">{{#date}}{{created_at}}{{/date}}</time>
+    <time class="post-metadata post-date">{{#date}}{{createdAt}}{{/date}}</time>
   </div>
   {{#if_can_edit_post}}
     <div class="post-icons">

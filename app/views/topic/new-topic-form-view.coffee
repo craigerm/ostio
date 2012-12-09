@@ -31,7 +31,7 @@ module.exports = class NewTopicFormView extends FormView
     if event.metaKey and event.keyCode is 13
       @$el.trigger('submit')
     else
-      @post.set(text: $(event.currentTarget).val())
+      @model.set(body: $(event.currentTarget).val())
 
   save: (event) =>
     spinner = new SpinnerView container: @$('.submit-form')
