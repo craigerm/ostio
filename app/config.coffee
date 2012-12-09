@@ -3,7 +3,7 @@ config = {api: {}}
 production = no
 
 config.api.root = if production
-  'http://quiet-brook-7460.herokuapp.com'
+  'http://api-binpub.herokuapp.com'
 else
   'http://localhost:3000'
 
