@@ -1,11 +1,11 @@
 config = {api: {}}
 
-production = yes
+production = no
 
 config.api.root = if production
   'http://quiet-brook-7460.herokuapp.com'
 else
-  'http://dev.ost.io:3000'
+  'http://localhost:3000'
 
 config.api.versionRoot = config.api.root + '/v1'
 
