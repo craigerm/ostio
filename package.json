@@ -18,7 +18,7 @@
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 1.5",
     "coffee-script-brunch": ">= 1.0 < 1.5",
-
+    "connect": "*",
     "css-brunch": ">= 1.0 < 1.5",
     "stylus-brunch": ">= 1.0 < 1.5",
 
